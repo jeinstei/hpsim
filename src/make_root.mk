@@ -12,10 +12,10 @@ PROJECT_ROOT:=$(patsubst %/,%,$(dir $(abspath $(lastword $(MAKEFILE_LIST)))))
   -lpthread -lreadline -lncurses -lm -lrt -ldl -lgcc
 
 PYTHON_INC_FLAGS=-I/usr/include/python2.7 \
-  -I/usr/lib64/python2.7/site-packages/numpy/core/include/numpy
+  -I/usr/local/lib/python2.7/dist-packages/numpy/core/include/numpy
 
-PYTHON_LD_FLAGS=-L./usr/local/lib/ \
-  -L/usr/lib64/python2.7/site-packages/numpy/core/lib -lpython2.7 
+PYTHON_LD_FLAGS=-L./usr/lib/ \
+  -L/usr/local/lib/python2.7/dist-packages/numpy/core/lib -lpython2.7 
 
 #GL_LD_FLAGS+=-lglut -lGLU -lGLEW 
 
